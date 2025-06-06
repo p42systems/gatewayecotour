@@ -1,0 +1,13 @@
+{
+"type": "FeatureCollection",
+"features": [
+{ "type": "Feature", "properties": { "sequence": 1, "name": "Riverside Entrance", "imageAlt": null, "address": null, "status": null, "longitude": -83.03219, "latitude": 42.03219, "extra": false, "id": "5", "image": null }, "geometry": { "type": "Point", "coordinates": [ -83.03219, 42.03219 ] } },
+{ "type": "Feature", "properties": { "sequence": 2, "name": "MainTrailMammal", "imageAlt": null, "address": null, "status": null, "longitude": -83.03176, "latitude": 42.18559, "extra": false, "id": "10", "image": "/photos/MainTrailMammal-Image1.jpg" }, "geometry": { "type": "Point", "coordinates": [ -83.03176, 42.18559 ] } },
+{ "type": "Feature", "properties": { "sequence": 3, "name": "MainTrailMisc", "imageAlt": null, "address": null, "status": null, "longitude": -83.03159, "latitude": 42.18543, "extra": false, "id": "15", "image": "/photos/MainTrailMisc-Image1.jpg" }, "geometry": { "type": "Point", "coordinates": [ -83.03159, 42.18543 ] } },
+{ "type": "Feature", "properties": { "sequence": 4, "name": "MainTrailNative", "imageAlt": null, "address": null,  "longitude": -83.03144, "latitude": 42.18524, "extra": false, "id": "20", "image": "/photos/MainTrailNative-Image1.jpg"}, "geometry": { "type": "Point", "coordinates": [ -83.03144, 42.18524 ] } },
+{ "type": "Feature", "properties": { "sequence": 5, "name": "Mason Entrance", "imageAlt": null, "address": null, "status": null,"longitude": -83.03162, "latitude": 42.18522, "extra": false, "id": "25", "image": null }, "geometry": { "type": "Point", "coordinates": [ -83.03162, 42.18522 ] } },
+{ "type": "Feature", "properties": { "sequence": 6, "name": "UpperTrailBirds", "imageAlt": null, "address": null,  "longitude": -83.03164, "latitude": 42.18531, "extra": false, "id": "30", "image": "/photos/UpperTrailBirds-Image1.jpg" }, "geometry": { "type": "Point", "coordinates": [ -83.03164, 42.18531 ] } },
+{ "type": "Feature", "properties": { "sequence": 7, "name": "MainTrailInvasive", "imageAlt": null, "address": null,  "longitude": -83.03128, "latitude": 42.18502, "extra": false, "id": "35", "image": "/photos/MainTrailInvasive-Image6.jpg"}, "geometry": { "type": "Point", "coordinates": [ -83.03128, 42.18502 ] } },
+{ "type": "Feature", "properties": { "sequence": 8, "name": "University Entrance", "imageAlt": null, "address": null,  "longitude": -82.0535871, "latitude": 42.3136222, "extra": false, "id": "40", "image": ""}, "geometry": { "type": "Point", "coordinates": [ -82.0535871, 42.3136222 ] } }
+]
+}
