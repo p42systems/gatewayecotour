@@ -439,7 +439,7 @@ export const MarkerCardHeader = styled.h2<{
     fontFamily: `"Roboto", sans-serif`,
     color:
       props.color === "selected"
-        ? props.theme.colors.quinary
+        ? props.theme.colors.senary
         : props.color === "suggested"
         ? props.theme.colors.senary
         : props.color === "welcome"
@@ -455,7 +455,7 @@ export const MarkerCardAddress = styled(Address)<{
 }>((props) => ({
   color:
     props.color === "selected"
-      ? props.theme.colors.quinary
+      ? props.theme.colors.senary
       : props.color === "suggested"
       ? props.theme.colors.senary
       : props.color === "welcome"
@@ -483,7 +483,7 @@ export const MarkerCardState = styled.span<{
   padding: "0.5rem 0 0 0",
   color:
     props.color === "selected"
-      ? props.theme.colors.quinary
+      ? props.theme.colors.senary
       : props.color === "suggested"
       ? props.theme.colors.senary
       : props.color === "welcome"
@@ -536,7 +536,7 @@ export const MarkerButton = styled(Button)<{
   cursor: "pointer",
   backgroundColor:
     props.color === "selected"
-      ? props.theme.colors.septenary
+      ? props.theme.colors.senary
       : props.color === "suggested"
       ? props.theme.colors.senary
       : props.color === "welcome"
@@ -566,7 +566,7 @@ export const StaticMakerButton = styled.span<{
   display: "inline-block",
   backgroundColor:
     props.color === "selected"
-      ? props.theme.colors.quinary
+      ? props.theme.colors.senary
       : props.color === "suggested"
       ? props.theme.colors.senary
       : props.color === "welcome"
@@ -1292,7 +1292,7 @@ export const ZoomIn = styled.span(() => ({
     content: `"+"`,
     position: "absolute",
     top: "-5px",
-    left: "4px",
+    left: "1px",
   },
 }));
 
