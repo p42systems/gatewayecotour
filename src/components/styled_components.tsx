@@ -865,18 +865,30 @@ export const SponsorPartnerContainer = styled.span(() => ({
   flexWrap: "wrap",
   overflow: "hidden",
   margin: "1rem 0 0 0",
-  gap: "50px"
+  gap: "50px",
+
+  "@media screen and (max-width: 1028px)": {
+    gap: "10px"
+  },
 }));
 
-export const SponsorPartnerImg = styled.img<{ large: boolean }>((props) => ({
+export const SponsorLink = styled.a(() => ({
+  display: "flex",
+  flexDirection: "center",
+  alignItems: "center",
+  margin: "0",
+}));
+
+export const SponsorPartnerImg = styled.img<{ wide: boolean }>((props) => ({
   padding: "0.25rem",
   margin: "0 0 1rem 0",
-  marginTop: "2rem",
-  "@media screen and (min-width: 600px)": {
-    maxHeight: props.large ? "300px" : "150px",
-  },
-  "@media screen and (max-width: 600px)": {
-    maxHeight: props.large ? "300px" : "150px",
+  marginTop: props.wide ? "-50px" : "2rem",
+  maxHeight: props.wide ? "100px" : "150px",
+
+  "@media screen and (max-width: 1028px)": {
+    maxWidth: "90%",
+    width: "100%",
+    margin: props.wide ? "1.5rem auto" : "0 auto"
   },
 }));
 
