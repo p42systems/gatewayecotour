@@ -15,7 +15,7 @@ function SponsorPartner() {
       <HomeSubHeader id="sponsor-partners">{header}</HomeSubHeader>
       <BodyParagraphs body={body} view={"home"} links={links} />
       <SponsorPartnerContainer>
-        <a href="https://www.publicboard.ca/en/PASS/index.aspx" target="_blank">
+        <a href="https://www.publicboard.ca/en/pass/index.aspx" target="_blank">
           <SponsorPartnerImg
             large={false}
             src="/main_logo.png"
