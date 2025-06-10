@@ -1,7 +1,9 @@
 import { Slide, Slider } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
+import { useScreenDetector } from "../../../../../hooks/useScreenDetector";
 
 import {
+  SlideDescription,
   DetailsImage,
   DetailsCarousel,
   DetailsCarouselImage,
@@ -15,13 +17,15 @@ import {
 import { MediaArrayProps } from "../../../../../types";
 
 function Images({ mediaArray }: MediaArrayProps) {
+  const { isMobile } = useScreenDetector();
+
   return (
     <>
       {mediaArray.length === 1 ? (
         <DetailsImage src={mediaArray[0].path} alt={mediaArray[0].imageAlt} />
       ) : (
         <DetailsCarousel
-          visibleSlides={2}
+          visibleSlides={isMobile ? 1 : 2}
           totalSlides={mediaArray.length}
           naturalSlideWidth={300}
           naturalSlideHeight={400}
@@ -30,12 +34,21 @@ function Images({ mediaArray }: MediaArrayProps) {
           <Slider>
             {mediaArray.map((image, index) => {
               return (
-                <Slide tag="a" index={index} key={index}>
+                <Slide tag="div" index={index} key={index}>
                   <DetailsCarouselImage
                     src={image.path}
                     alt={image.imageAlt}
                     hasMasterSpinner={true}
                   />
+                  {image.description && image.description.length > 1 ? (
+                    <SlideDescription>
+                      {image.description.map((item, index) => 
+                          <span key={index} className="img-description-span">{item}</span>
+                      )}
+                    </SlideDescription>
+                  ) : (
+                    <></>
+                  )}
                 </Slide>
               );
             })}

@@ -35,7 +35,7 @@ function Media() {
     } else if (urlArray.length === 1 && urlArray[0].type === "video") {
       mediaType = "video";
     } else if (urlArray.length === 1 && urlArray[0].type === "audio") {
-      mediaType = "audio";
+      mediaType = "Z";
     } else if (urlArray.every(isMultipleImages)) {
       mediaType = "images";
     } else if (urlArray.length > 1 && !urlArray.every(isMultipleImages)) {

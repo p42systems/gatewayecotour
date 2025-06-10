@@ -628,6 +628,13 @@ export const MapControlErrorMessage = styled.span((props) => ({
   padding: "2px",
 }));
 
+export const SlideDescription = styled.p((props) => ({
+  color: `${props.theme.colors.senary}`,
+  backgroundColor: `${props.theme.colors.primary}`,
+  margin: "0",
+  padding: "10px",
+}));
+
 export const DetailsImage = styled.img((props) => ({
   padding: "5px",
   backgroundColor: `${props.theme.colors.senary}`,
@@ -665,6 +672,7 @@ export const DetailsCarouselImage = styled(CarouselImage)(() => ({
   cursor: "initial",
   maxWidth: "100%",
   objectFit: "cover",
+
 }));
 
 export const CarouselButtonFirst = styled(ButtonFirst)((props) => ({

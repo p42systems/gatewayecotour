@@ -90,7 +90,7 @@ export type MarkerPayload = {
 
 export type MarkerDetailPayload = {
   id: string;
-  url: { path: string; type: string; imageAlt: string }[];
+  url: { path: string; type: string; imageAlt: string, description: string[] }[];
   description: string[] | string;
   timeline: { header: string; list: string[] };
   image: string;
