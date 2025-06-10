@@ -5,12 +5,9 @@ import { ConfigContext } from "../../services/configContext";
 import {
   HeaderBackgroundImage,
   HeaderContainer,
-  HelpLink,
   HeaderImage,
   HeaderSubBar,
-  HeaderTopBar,
   HeaderSubBarContainer,
-  HeaderHelpLinkContainer,
 } from "../styled_components";
 
 import bgImage from "/bg_main.png";
@@ -23,16 +20,6 @@ function Header({ size = "long", children }: HeaderProps) {
   return (
     <HeaderContainer>
       <HeaderBackgroundImage size={size} backgroundImage={bgImage}>
-        <HeaderTopBar>
-          <HeaderHelpLinkContainer>
-            {/* <HelpLink
-              title="More Information"
-              onClick={() => {
-                setLocation("/about");
-              }}
-            /> */}
-          </HeaderHelpLinkContainer>
-        </HeaderTopBar>
         <a
           onClick={() => {
             setLocation("/");
