@@ -178,7 +178,9 @@ export interface CompleteCheckBoxProps {
 }
 
 export interface MediaArrayProps {
-  mediaArray: { path: string; type: string; imageAlt: string }[];
+  mediaArray: {
+    [x: string]: any; path: string; type: string; imageAlt: string 
+}[];
 }
 
 export interface HeaderProps {
