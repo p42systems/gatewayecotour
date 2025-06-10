@@ -11,6 +11,28 @@
     <meta property="og:description" content="Step into the heart of nature without leaving the city. Welcome to Gateway Park, a vibrant ecological corridor nestled near downtown — where trails lead you through a rich mosaic of deciduous trees, native plants, fluttering insects, and the songs of birds overhead. This digital walking eco-tour invites you to look, listen, and learn about the many ecological treasures that make Gateway Park a sanctuary for both wildlife and people." />
     <meta property="og:image" content="/bg_main.png" />
     <title>Gateway Park Eco-Tour</title>
+    <style>
+      .img-description-span {
+        display: block;
+        padding-bottom: 10px;
+      }
+      .img-description-span:last-of-type {
+        padding-bottom: 0;
+      }
+      .carousel__inner-slide {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+      .carousel__slider-tray {
+        gap: 5px;
+      }
+      @media screen and (max-width: 970px) {
+        .carousel__slider-tray {
+          gap: 0;
+        }
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
