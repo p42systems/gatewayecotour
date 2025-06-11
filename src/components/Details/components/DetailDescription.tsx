@@ -13,17 +13,6 @@ function DetailDescription() {
           <p key={index}>{paragraph}</p>
         ))
       )}
-      {detail.timeline ? (
-        <>
-          <hr />
-          <h3>{detail.timeline.header}:</h3>
-          <ul>
-            {detail.timeline.list.map((listItem, index) => (
-              <li key={index}>{listItem}</li>
-            ))}
-          </ul>
-        </>
-      ) : null}
     </DetailsContentContainer>
   );
 }

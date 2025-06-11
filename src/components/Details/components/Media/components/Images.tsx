@@ -3,6 +3,7 @@ import "pure-react-carousel/dist/react-carousel.es.css";
 import { useScreenDetector } from "../../../../../hooks/useScreenDetector";
 
 import {
+  SlideTitle,
   SlideDescription,
   DetailsImage,
   DetailsCarousel,
@@ -35,15 +36,28 @@ function Images({ mediaArray }: MediaArrayProps) {
             {mediaArray.map((image, index) => {
               return (
                 <Slide tag="div" index={index} key={index}>
+                  {image.title ? (
+                    <SlideTitle>
+                      <span className="img-description-span">
+                        {image.title}
+                      </span>
+                    </SlideTitle>
+                  ) : (
+                    <></>
+                  )}
                   <DetailsCarouselImage
                     src={image.path}
                     alt={image.imageAlt}
                     hasMasterSpinner={true}
                   />
-                  {image.description && image.description.length > 1 ? (
+                  {image.description ? (
                     <SlideDescription>
-                      {image.description.map((item, index) => 
-                          <span key={index} className="img-description-span">{item}</span>
+                      {image.description.map(
+                        (item: string[], index: number) => (
+                          <span key={index} className="img-description-span">
+                            {item}
+                          </span>
+                        )
                       )}
                     </SlideDescription>
                   ) : (
