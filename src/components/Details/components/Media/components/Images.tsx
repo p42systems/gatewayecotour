@@ -20,6 +20,8 @@ import { MediaArrayProps } from "../../../../../types";
 function Images({ mediaArray }: MediaArrayProps) {
   const { isMobile } = useScreenDetector();
 
+  console.log(isMobile);
+
   return (
     <>
       {mediaArray.length === 1 ? (
@@ -67,7 +69,7 @@ function Images({ mediaArray }: MediaArrayProps) {
               );
             })}
           </Slider>
-          {mediaArray.length > 2 ? (
+          {mediaArray.length > 2 || isMobile ? (
             <>
               <CarouselDotGroup />
               <CarouselButtonFirst>First</CarouselButtonFirst>
@@ -75,7 +77,9 @@ function Images({ mediaArray }: MediaArrayProps) {
               <CarouselButtonNext>Next</CarouselButtonNext>
               <CarouselButtonLast>Last</CarouselButtonLast>
             </>
-          ) : null}
+          ) : (
+            <></>
+          )}
         </DetailsCarousel>
       )}
     </>

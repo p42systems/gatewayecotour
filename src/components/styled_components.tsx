@@ -633,7 +633,6 @@ export const SlideTitle = styled.p((props) => ({
   backgroundColor: `${props.theme.colors.quaternary}`,
   margin: "0",
   padding: "10px",
-  cursor: "default",
   fontFamily: `"Roboto Slab",serif`,
   fontWeight: "700",
 }));
@@ -643,8 +642,7 @@ export const SlideDescription = styled.p((props) => ({
   backgroundColor: `${props.theme.colors.primary}`,
   margin: "0",
   padding: "10px",
-  cursor: "default",
-  fontSize: "0.9rem"
+  fontSize: "0.9rem",
 }));
 
 export const DetailsImage = styled.img((props) => ({
@@ -684,7 +682,7 @@ export const DetailsCarouselImage = styled(CarouselImage)(() => ({
   cursor: "initial",
   maxWidth: "100%",
   objectFit: "cover",
-
+  cursor: "grab",
 }));
 
 export const CarouselButtonFirst = styled(ButtonFirst)((props) => ({
