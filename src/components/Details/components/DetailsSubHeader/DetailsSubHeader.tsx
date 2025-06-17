@@ -46,11 +46,7 @@ function DetailsSubHeader() {
       </DetailsPageButtonsContainer>
       <HeaderDetails>
         <HeaderDetailsH2>{marker.name}</HeaderDetailsH2>
-        {
-          marker.address
-          ? <Address>{marker.address}</Address>
-          : <></>
-        }
+        {marker.address ? <Address>{marker.address}</Address> : <></>}
       </HeaderDetails>
     </>
   );

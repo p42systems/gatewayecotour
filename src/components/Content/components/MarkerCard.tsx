@@ -87,11 +87,7 @@ function MarkerCard({ marker, selected, shouldScroll }: MarkerListItemProps) {
       />
       <CardContent>
         <CardHeader>{marker.name}</CardHeader>
-        {
-          marker.address
-          ? <CardAddress>{marker.address}</CardAddress>
-          : <></>
-        }
+        {marker.address ? <CardAddress>{marker.address}</CardAddress> : <></>}
 
         <ViewCardButton
           aria-label={`View ${marker.name} content page`}

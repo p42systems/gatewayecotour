@@ -679,7 +679,6 @@ export const DetailsCarousel = styled(CarouselProvider)((props) => ({
 
 export const DetailsCarouselImage = styled(CarouselImage)(() => ({
   maxHeight: "600px",
-  cursor: "initial",
   maxWidth: "100%",
   objectFit: "cover",
   cursor: "grab",

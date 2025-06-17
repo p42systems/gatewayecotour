@@ -9,8 +9,6 @@ import Images from "./components/Images";
 function Media() {
   const detail = useAtomValue(detailsQueryAtom);
 
-  // Conditional detail.url rendering
-
   const isMultipleImages = (urlObject: {
     path: string;
     type: string;
@@ -35,7 +33,7 @@ function Media() {
     } else if (urlArray.length === 1 && urlArray[0].type === "video") {
       mediaType = "video";
     } else if (urlArray.length === 1 && urlArray[0].type === "audio") {
-      mediaType = "Z";
+      mediaType = "audio";
     } else if (urlArray.every(isMultipleImages)) {
       mediaType = "images";
     } else if (urlArray.length > 1 && !urlArray.every(isMultipleImages)) {
