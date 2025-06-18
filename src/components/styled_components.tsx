@@ -91,6 +91,21 @@ export const GeneralLink = styled(Link)((props) => ({
   "&:visited": {},
 }));
 
+export const SelectionsContainer = styled.article((props) => ({
+  display: "flex",
+  flexFlow: "row wrap",
+  alignItems: "center",
+  justifyContent: "center",
+  minHeight: "250px",
+  maxWidth: "100%",
+  border: `2px solid ${props.theme.colors.primary}`,
+  borderRadius: "5px",
+  margin: "0.5rem",
+  marginBottom: "3rem",
+  padding: "1rem",
+  backgroundColor: props.theme.colors.primary + `88`,
+}));
+
 export const Button = styled.button((props) => ({
   backgroundColor: props.theme.colors.quaternary,
   color: props.theme.colors.primary,
@@ -181,6 +196,20 @@ export const CardContainer = styled.article((props) => ({
   backgroundColor: props.theme.colors.quaternary,
 }));
 
+export const SelectCardContainer = styled.article((props) => ({
+  display: "grid",
+  minHeight: "150px",
+  width: "250px",
+  border: `2px solid ${props.theme.colors.primary}`,
+  borderRadius: "5px",
+  margin: "0.5rem",
+  gap: "0.5rem 0.5rem",
+  gridTemplateColumns: "repeat(3, 1fr)",
+  gridTemplateRows: "1fr",
+  position: "relative",
+  backgroundColor: props.theme.colors.quaternary,
+}));
+
 export const CardState = styled.div(() => ({
   position: "absolute",
   right: 0,
@@ -211,6 +240,21 @@ export const CardContent = styled.div(() => ({
   height: "150px",
   paddingBottom: "0.25rem",
   paddingRight: "0.1rem",
+}));
+
+export const SelectCardContent = styled.div(() => ({
+  gridColumnStart: 1,
+  gridColumnEnd: 4,
+  gridRowStart: 1,
+  gridRowEnd: 1,
+  display: "grid",
+  gridTemplateColumns: "40% 0.5em 55%",
+  gridTemplateRows: "60% 20% 20%",
+  gap: "0px 0px",
+  width: "217px",
+  height: "120px",
+  paddingLeft: "1rem",
+  paddingRight: "1rem"
 }));
 
 export const CardButtons = styled.div(() => ({
@@ -279,6 +323,15 @@ export const TourCardButton = styled(CardButton)(() => ({
   gridColumnEnd: 3,
   gridRowStart: 3,
   gridRowEnd: 3,
+}));
+
+export const TourSelectButton = styled(CardButton)(() => ({
+  gridColumnStart: 1,
+  gridColumnEnd: 6,
+  gridRowStart: 3,
+  gridRowEnd: 4,
+  marginTop: "0.5rem",
+  height: "2rem",
 }));
 
 export const AboutParagraph = styled.p((props) => ({
@@ -1204,7 +1257,7 @@ export const CenterAllContainer = styled.div(() => ({
   justifyContent: "center",
 }));
 
-export const CenterImgContainer = styled.div(() => ({
+export const CenterImgContainer = styled.div<{ fixed: boolean }>((props) => ({
   "@media screen and (min-width: 1000px)": {
     width: "auto",
   },
@@ -1214,11 +1267,11 @@ export const CenterImgContainer = styled.div(() => ({
   minWidth: "365px",
   maxWidth: "500px",
   margin: "0 0 2rem 0",
-  position: "fixed",
+  position: props.fixed ? "fixed" : "initial",
 }));
 
 export const WarningImageContainer = styled.div(() => ({
-  margin: "0 0 5rem 0",
+  margin: "0 0 2rem 0",
 }));
 
 export const ErrorMessage = styled.p((props) => ({
