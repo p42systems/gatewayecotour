@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { TourStates } from "../types";
 import { Link } from "wouter";
 import ReactPlayer from "react-player";
-import ReactAudioPlayer from 'react-audio-player';
+import ReactAudioPlayer from "react-audio-player";
 import {
   CarouselProvider,
   Image as CarouselImage,
@@ -890,9 +890,6 @@ export const SponsorPartnerContainer = styled.span(() => ({
 }));
 
 export const SponsorLink = styled.a(() => ({
-  display: "flex",
-  flexDirection: "center",
-  alignItems: "center",
   margin: "0",
 }));
 

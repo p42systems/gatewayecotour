@@ -20,8 +20,6 @@ import { MediaArrayProps } from "../../../../../types";
 function Images({ mediaArray }: MediaArrayProps) {
   const { isMobile } = useScreenDetector();
 
-  console.log(isMobile);
-
   return (
     <>
       {mediaArray.length === 1 ? (

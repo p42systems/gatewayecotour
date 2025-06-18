@@ -16,14 +16,20 @@ function SponsorPartner() {
       <HomeSubHeader id="sponsor-partners">{header}</HomeSubHeader>
       <BodyParagraphs body={body} view={"home"} links={links} />
       <SponsorPartnerContainer>
-        <SponsorLink href="https://www.publicboard.ca/en/pass/index.aspx" target="_blank">
+        <SponsorLink
+          href="https://www.publicboard.ca/en/pass/index.aspx"
+          target="_blank"
+        >
           <SponsorPartnerImg
             wide={false}
             src="/main_logo.png"
             alt="Gateway Park Walking Eco-Tour logo"
           />
         </SponsorLink>
-        <SponsorLink href="https://wwf.ca/take-action/apply-for-funding/go-wild-school-grants/" target="_blank">
+        <SponsorLink
+          href="https://wwf.ca/take-action/apply-for-funding/go-wild-school-grants/"
+          target="_blank"
+        >
           <SponsorPartnerImg
             wide={false}
             src="/logos/wwf-go-wild-school-grants.png"

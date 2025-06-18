@@ -4,12 +4,11 @@ import { MediaArrayProps } from "../../../../../types";
 function Audio({ mediaArray }: MediaArrayProps) {
   return (
     <>
-      {mediaArray.map((audio) => (
+      {mediaArray.map((audio, index) => (
         <AudioPlayer
+          key={index}
           controls={true}
           autoPlay={false}
-          height={"400px"}
-          width={"100%"}
           src={audio.path}
         />
       ))}
