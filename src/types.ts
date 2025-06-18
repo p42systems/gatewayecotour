@@ -165,6 +165,10 @@ export interface MarkerListItemProps {
   shouldScroll: (top: number, bottom: number) => boolean;
 }
 
+export interface SelectCardItemProps {
+  marker: IMarker;
+}
+
 export interface IMapIcons {
   base: IconOptions;
   selected: IconOptions;
