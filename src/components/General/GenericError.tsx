@@ -21,7 +21,7 @@ function GenericError() {
           alt="An error has occured"
         />
       </WarningImageContainer>
-      <CenterImgContainer>
+      <CenterImgContainer fixed={false}>
         <img width="100%" src="/icons/404.svg" alt="404 page not found" />
       </CenterImgContainer>
       <ErrorMessage>Something went wrong.</ErrorMessage>

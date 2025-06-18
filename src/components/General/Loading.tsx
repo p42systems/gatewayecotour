@@ -7,7 +7,7 @@ import {
 function Loading() {
   return (
     <CenterAllContainer>
-      <CenterImgContainer>
+      <CenterImgContainer fixed={true}>
         <img width="100%" src="/loading_black.png" alt="The tour is loading" />
         <LoaderAnimation />
       </CenterImgContainer>
