@@ -27,7 +27,7 @@ function MarkerList() {
   return (
     <CardsContainer ref={scrollableRef} aria-label="List of markers">
       {order
-        .map((makerId) => markers[makerId])
+        .map((markerId) => markers[markerId])
         .map((marker) => (
           <MarkerCard
             key={marker.id}
