@@ -1218,6 +1218,10 @@ export const NavigationContentButton = styled(NavigationButton)((props) => ({
   backgroundColor: props.theme.colors.quaternary,
 }));
 
+export const NavigationSelectButton = styled(NavigationButton)((props) => ({
+  backgroundColor: props.theme.colors.tertiary,
+}));
+
 export const NavigationTourButton = styled(NavigationButton)((props) => ({
   backgroundColor: props.theme.colors.tertiary,
 }));
