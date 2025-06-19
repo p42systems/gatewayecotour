@@ -90,7 +90,13 @@ export type MarkerPayload = {
 
 export type MarkerDetailPayload = {
   id: string;
-  url: { path: string; type: string; imageAlt: string, description: string[] }[];
+  url: {
+    path: string;
+    type: string;
+    imageAlt?: string;
+    description?: string[];
+    title?: string;
+  }[];
   description: string[] | string;
   timeline: { header: string; list: string[] };
   image: string;
@@ -183,8 +189,12 @@ export interface CompleteCheckBoxProps {
 
 export interface MediaArrayProps {
   mediaArray: {
-    [x: string]: any; path: string; type: string; imageAlt: string 
-}[];
+    path: string;
+    type: string;
+    imageAlt?: string | null;
+    description?: string[] | null;
+    title?: string | null;
+  }[];
 }
 
 export interface HeaderProps {

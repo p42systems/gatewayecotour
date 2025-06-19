@@ -12,24 +12,36 @@ function Media() {
   const isMultipleImages = (urlObject: {
     path: string;
     type: string;
-    imageAlt: string;
+    imageAlt?: string;
+    description?: string[];
+    title?: string;
   }) => urlObject.type === "image";
 
-  let mediaType: string;
+  let mediaType: string | null;
 
-  let urlVideo: { path: string; type: string; imageAlt: string }[];
-
-  let urlAudio: { path: string; type: string; imageAlt: string }[];
-
-  let urlImages: { path: string; type: string; imageAlt: string }[];
+  let urlVideo: { path: string; type: string; imageAlt?: string }[];
+  let urlAudio: { path: string; type: string }[];
+  let urlImages: {
+    path: string;
+    type: string;
+    imageAlt?: string;
+    title?: string;
+    description?: string[];
+  }[];
 
   let mediaPlayer;
 
   function fetchMediaType(
-    urlArray: { path: string; type: string; imageAlt: string }[]
+    urlArray: {
+      path: string;
+      type: string;
+      imageAlt?: string;
+      title?: string;
+      description?: string[];
+    }[]
   ) {
     if (!urlArray) {
-      mediaType = "";
+      mediaType = null;
     } else if (urlArray.length === 1 && urlArray[0].type === "video") {
       mediaType = "video";
     } else if (urlArray.length === 1 && urlArray[0].type === "audio") {
@@ -45,19 +57,23 @@ function Media() {
   }
 
   function video(
-    mediaArray: { path: string; type: string; imageAlt: string }[]
+    mediaArray: { path: string; type: string; imageAlt?: string }[]
   ) {
     return <Video mediaArray={mediaArray} />;
   }
 
-  function audio(
-    mediaArray: { path: string; type: string; imageAlt: string}[]
-  ) {
+  function audio(mediaArray: { path: string; type: string }[]) {
     return <Audio mediaArray={mediaArray} />;
   }
 
   function images(
-    mediaArray: { path: string; type: string; imageAlt: string }[]
+    mediaArray: {
+      path: string;
+      type: string;
+      imageAlt?: string;
+      description?: string[];
+      title?: string;
+    }[]
   ) {
     return <Images mediaArray={mediaArray} />;
   }
@@ -65,15 +81,21 @@ function Media() {
   function mixedMedia() {
     return (
       <>
-        {video(urlVideo)}
-        {audio(urlAudio)}
-        {images(urlImages)}
+        {urlVideo ? video(urlVideo) : <></>}
+        {urlAudio ? audio(urlAudio) : <></>}
+        {urlImages ? images(urlImages) : <></>}
       </>
     );
   }
 
   function setMediaPlayer(
-    urlArray: { path: string; type: string; imageAlt: string }[]
+    urlArray: {
+      path: string;
+      type: string;
+      imageAlt?: string;
+      description?: string[];
+      title?: string;
+    }[]
   ) {
     switch (mediaType) {
       case "video":
@@ -84,7 +106,6 @@ function Media() {
         break;
       case "audio":
         mediaPlayer = audio(urlArray);
-        console.log("audio");
         break;
       case "mixedMedia":
         mediaPlayer = mixedMedia();
@@ -95,15 +116,18 @@ function Media() {
   }
 
   function checkMedia(
-    urlArray: { path: string; type: string; imageAlt: string }[]
+    urlArray: {
+      path: string;
+      type: string;
+      imageAlt?: string;
+      description?: string[];
+      title?: string;
+    }[]
   ) {
     fetchMediaType(urlArray);
-
     setMediaPlayer(urlArray);
   }
-
   checkMedia(detail.url);
-
   return <>{mediaPlayer}</>;
 }
 

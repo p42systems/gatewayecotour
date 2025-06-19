@@ -23,7 +23,10 @@ function Images({ mediaArray }: MediaArrayProps) {
   return (
     <>
       {mediaArray.length === 1 ? (
-        <DetailsImage src={mediaArray[0].path} alt={mediaArray[0].imageAlt} />
+        <DetailsImage
+          src={mediaArray[0].path ?? undefined}
+          alt={mediaArray[0].imageAlt ?? undefined}
+        />
       ) : (
         <DetailsCarousel
           visibleSlides={isMobile ? 1 : 2}
@@ -42,27 +45,21 @@ function Images({ mediaArray }: MediaArrayProps) {
                         {image.title}
                       </span>
                     </SlideTitle>
-                  ) : (
-                    <></>
-                  )}
+                  ) : null}
                   <DetailsCarouselImage
                     src={image.path}
-                    alt={image.imageAlt}
+                    alt={image.imageAlt ?? undefined}
                     hasMasterSpinner={true}
                   />
                   {image.description ? (
                     <SlideDescription>
-                      {image.description.map(
-                        (item: string[], index: number) => (
-                          <span key={index} className="img-description-span">
-                            {item}
-                          </span>
-                        )
-                      )}
+                      {image.description.map((item: string, index: number) => (
+                        <span key={index} className="img-description-span">
+                          {item}
+                        </span>
+                      ))}
                     </SlideDescription>
-                  ) : (
-                    <></>
-                  )}
+                  ) : null}
                 </Slide>
               );
             })}
@@ -75,9 +72,7 @@ function Images({ mediaArray }: MediaArrayProps) {
               <CarouselButtonNext>Next</CarouselButtonNext>
               <CarouselButtonLast>Last</CarouselButtonLast>
             </>
-          ) : (
-            <></>
-          )}
+          ) : null}
         </DetailsCarousel>
       )}
     </>

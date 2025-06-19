@@ -19,7 +19,7 @@ function Select() {
         <SelectionsContainer>
           {entrances.map((marker) => (
             <SelectCard key={marker.id} marker={marker} />
-            ))}
+          ))}
         </SelectionsContainer>
       </MainContainer>
       <Footer />
