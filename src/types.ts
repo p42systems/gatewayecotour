@@ -17,6 +17,7 @@ export type IMarker = {
   sequence: number;
   image: string;
   imageAlt: string;
+  start?: string;
 };
 
 export type MarkerContext = {
@@ -173,6 +174,7 @@ export interface MarkerListItemProps {
 
 export interface SelectCardItemProps {
   marker: IMarker;
+  sequence: string;
 }
 
 export interface IMapIcons {

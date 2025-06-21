@@ -301,6 +301,18 @@ export const markersQueryAtom = atomWithQuery<
   },
 }));
 
+export const allMarkersQueryAtom = atomWithQuery<
+  ReturnType<typeof fetchMarkers>,
+  unknown
+>((get) => ({
+  queryKey: ["markers"],
+  queryFn: async () => {
+    const fullTour = get(fullTourAtom);
+
+    return fetchMarkers(fullTour);
+  },
+}));
+
 /*********************************
  * Details Page Query / Atoms
  *********************************/
@@ -364,6 +376,8 @@ export const isDropDownAtom: PrimitiveAtom<boolean> = atom(false);
 export const getDropDownAtom = atom((get) => {
   return get(isDropDownAtom) === true ? "flex" : "none";
 });
+
+export const fullTourAtom: PrimitiveAtom<string> = atom("full");
 
 export const tourPreferenceAtom: PrimitiveAtom<string> = atom("full");
 

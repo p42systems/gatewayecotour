@@ -4,6 +4,9 @@ import { mergeRefs } from "react-merge-refs";
 import { useLayoutEffect, useRef } from "react";
 import { useSetAtom } from "jotai";
 import { useLocation } from "wouter";
+import { tourPreferenceAtom } from "../../atoms";
+
+import { loadTour } from "../../services/navigation";
 
 import {
   SelectCardContainer,
@@ -12,13 +15,12 @@ import {
   CardAddress,
   TourSelectButton,
 } from "../styled_components";
-import { updateSelectedMarkerAtom } from "../../atoms";
 
 import { SelectCardItemProps } from "../../types";
 
-function SelectCard({ marker }: SelectCardItemProps) {
+function SelectCard({ marker, sequence }: SelectCardItemProps) {
   const [, setLocation] = useLocation();
-  const updateSelectedMarker = useSetAtom(updateSelectedMarkerAtom);
+  const setTourPreference = useSetAtom(tourPreferenceAtom);
   const [markerMeasureRef] = useMeasure({
     scroll: true,
     polyfill: ResizeObserver,
@@ -33,13 +35,19 @@ function SelectCard({ marker }: SelectCardItemProps) {
       <SelectCardContent>
         <CardHeader>{marker.name}</CardHeader>
         {marker.address ? <CardAddress>{marker.address}</CardAddress> : <></>}
+        {/* <NavigationTourButton
+          title="Start Tour"
+          aria-label="Start Tour"
+          onClick={() => {
+            loadTour(sequence, setTourPreference, setLocation);
+          }}
+        ></NavigationTourButton> */}
         <TourSelectButton
-          aria-label={`Start tour at ${marker.name} `}
-          title={`Start tour at ${marker.name}`}
+          title="Start Tour"
+          aria-label="Start Tour"
           tabIndex={0}
           onClick={() => {
-            updateSelectedMarker(marker.id);
-            setLocation("/tour");
+            loadTour(sequence, setTourPreference, setLocation);
           }}
         >
           Start Tour
