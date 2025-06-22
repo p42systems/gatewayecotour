@@ -23,17 +23,17 @@ function SmallMap() {
       <MapContainer
         center={marker.point}
         style={{ width: "100%", height: "100%" }}
-        zoom={16}
+        zoom={18}
         zoomControl={false}
         {...interactionOptions}
       >
-        <ZoomControls minZoom={14} maxZoom={18} />
+        <ZoomControls minZoom={16} maxZoom={20} />
 
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          minZoom={14}
-          maxZoom={18}
+          minZoom={16}
+          maxZoom={20}
         />
 
         <Marker
