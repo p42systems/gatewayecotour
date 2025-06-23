@@ -1,18 +1,18 @@
 {
 "type": "FeatureCollection",
 "features": [
-{ "type": "Feature", "properties": { "sequence": 1, "name": "Park History (Mason Entrance)", "imageAlt": null, "address": "222 Cameron Ave (rear, via alley)", "status": null,"longitude": -83.03162, "latitude": 42.18522, "extra": false, "id": "25", "image": "/photos/ParkHistory-Image1.jpg" }, "geometry": { "type": "Point", "coordinates": [ -83.03162, 42.18522 ] } },
+{ "type": "Feature", "properties": { "sequence": 1, "name": "Park History (Mason Entrance)", "imageAlt": "Archival photo of a train going through a tunnel", "address": "222 Cameron Ave (rear, via alley)", "status": null,"longitude": -83.054511, "latitude": 42.314485, "extra": false, "id": "25", "image": "/photos/ParkHistory-Image1.jpg" }, "geometry": { "type": "Point", "coordinates": [ -83.054511, 42.314485 ] } },
 
-{ "type": "Feature", "properties": { "sequence": 2, "name": "Birds", "imageAlt": null, "address": "",  "longitude": -83.03164, "latitude": 42.18531, "extra": false, "id": "30", "image": "/photos/UpperTrailBirds-Image1.jpg" }, "geometry": { "type": "Point", "coordinates": [ -83.03164, 42.18531 ] } },
+{ "type": "Feature", "properties": { "sequence": 2, "name": "Birds", "imageAlt": "Photo of a small bird with a white front, grey upper body, and rust-colour under the wings", "address": "",  "longitude": -83.054568, "latitude": 42.314753, "extra": false, "id": "30", "image": "/photos/UpperTrailBirds-Image1.jpg" }, "geometry": { "type": "Point", "coordinates": [ -83.054568, 42.314753 ] } },
 
-{ "type": "Feature", "properties": { "sequence": 3, "name": "Mammals", "imageAlt": null, "address": "", "status": null, "longitude": -83.03176, "latitude": 42.18559, "extra": false, "id": "10", "image": "/photos/MainTrailMammal-Image1.jpg" }, "geometry": { "type": "Point", "coordinates": [ -83.03176, 42.18559 ] } },
+{ "type": "Feature", "properties": { "sequence": 3, "name": "Mammals", "imageAlt": "Photo of a skunk standing in a grassy field", "address": "", "status": null, "longitude": -83.054895, "latitude": 42.315539, "extra": false, "id": "10", "image": "/photos/MainTrailMammal-Image1.jpg" }, "geometry": { "type": "Point", "coordinates": [ -83.054895, 42.315539 ] } },
 
-{ "type": "Feature", "properties": { "sequence": 4, "name": "Miscellaneous Fauna", "imageAlt": null, "address": "", "status": null, "longitude": -83.03159, "latitude": 42.18543, "extra": false, "id": "15", "image": "/photos/MainTrailMisc-Image1.jpg" }, "geometry": { "type": "Point", "coordinates": [ -83.03159, 42.18543 ] } },
+{ "type": "Feature", "properties": { "sequence": 4, "name": "Miscellaneous Fauna", "imageAlt": "Photo of a small slender snake on the ground", "address": "", "status": null, "longitude": -83.054414, "latitude": 42.315091, "extra": false, "id": "15", "image": "/photos/MainTrailMisc-Image1.jpg" }, "geometry": { "type": "Point", "coordinates": [ -83.054414, 42.315091 ] } },
 
-{ "type": "Feature", "properties": { "sequence": 5, "name": "Native Plant Species", "imageAlt": null, "address": "",  "longitude": -83.03144, "latitude": 42.18524, "extra": false, "id": "20", "image": "/photos/MainTrailNative-Image1.jpg"}, "geometry": { "type": "Point", "coordinates": [ -83.03144, 42.18524 ] } },
+{ "type": "Feature", "properties": { "sequence": 5, "name": "Native Plant Species", "imageAlt": "Photo of a flowering plant with green leaves and pink-white flowers", "address": "",  "longitude": -83.054012, "latitude": 42.314553, "extra": false, "id": "20", "image": "/photos/MainTrailNative-Image1.jpg"}, "geometry": { "type": "Point", "coordinates": [ -83.054012, 42.314553 ] } },
 
-{ "type": "Feature", "properties": { "sequence": 6, "name": "Invasive Plant Species", "imageAlt": null, "address": "",  "longitude": -83.03128, "latitude": 42.18502, "extra": false, "id": "35", "image": "/photos/MainTrailInvasive-Image6.jpg"}, "geometry": { "type": "Point", "coordinates": [ -83.03128, 42.18502 ] } },
+{ "type": "Feature", "properties": { "sequence": 6, "name": "Invasive Plant Species", "imageAlt": "Photo of a tall shrub with green leaves and small white flowers", "address": "",  "longitude": -83.053560, "latitude": 42.313947, "extra": false, "id": "35", "image": "/photos/MainTrailInvasive-Image6.jpg"}, "geometry": { "type": "Point", "coordinates": [ -83.053560, 42.313947 ] } },
 
-{ "type": "Feature", "properties": { "sequence": 7, "name": "Ground, Engage, Express", "imageAlt": null, "address": "256 Cameron Ave", "status": null,"longitude": -83.03162, "latitude": 42.18522, "extra": true, "id": "23", "image": "/photos/GEE-Image1.png" }, "geometry": { "type": "Point", "coordinates": [ -83.03162, 42.18522 ] } }
+{ "type": "Feature", "properties": { "sequence": 7, "name": "Ground, Engage, Express", "imageAlt": "Logo for the GEE project", "address": "256 Cameron Ave", "status": null,"longitude": -83.054740, "latitude": 42.313870, "extra": true, "id": "23", "image": "/photos/GEE-Image1.png" }, "geometry": { "type": "Point", "coordinates": [ -83.054740, 42.313870 ] } }
 ]
 }

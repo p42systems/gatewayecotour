@@ -1,6 +1,6 @@
-# Pytheas Template
+# Gateway Park EcoTour: A Pytheas Application
 
-Pytheas is a React application that implements a guided walking tour, using Leaflet to visualize a map and Open Route Service to generate walking directions. The work was originally done through a grant funded by the Canadian Urban Institute to create a walking tour of the McDougall Corridor, a historic Black neighbourhood in Windsor, Ontario, and expanded for this implementation in partnership with Walter Cassidy of the Windsor Essex Rainbow Alliance (WERA). You may find that visiting queerwalk.ca gives you some insight into the ways this code can be used in your own project.
+Pytheas is a React application that implements a guided walking tour, using Leaflet to visualize a map and Open Route Service to generate walking directions. The work was originally done through a grant funded by the Canadian Urban Institute to create a walking tour of the McDougall Corridor, a historic Black neighbourhood in Windsor, Ontario, and expanded for further implementations including [Queer Walk](https://queerwalk.ca) and [Motor City Murals](https://motorcitymurals.tours/), as well as this application, the [Gateway Park EcoTour](https://www.gatewayparkecotour.com/) created by the students at the Public Alternative Secondary School located next to Gateway Park in the Mason Educational Centre with funding provided by the Go Wild School Grants from the World Wildlife Federation. You may find that visiting these sites gives you some insight into the ways this code can be used in your own project.
 
 Pytheas provides the following functionality:
 
@@ -55,15 +55,16 @@ Each of these JSON files contains detailed information about a point of interest
 
 ### Tour stop media
 
-This application has support for images and videos for each stop on the tour.
+This application has support for videos, audio, and/or images for each stop on the tour, with the option to add captions to the images.
 
 #### /src/components/Details.tsx
 
-Based on the *type* given in each marker JSON file, the media will be sorted as either video, images, or a combination of both:
+Based on the *type* given in each marker JSON file, the media will be sorted as either video, audio, images, or a combination:
 
 - If there is more than one image object in the url field, the Details component will create an image carousel using Express Labs' [pure-react-carousel](https://express-labs.github.io/pure-react-carousel/), otherwise the single image will be rendered as is.
-- If there is a video in the url field, the Details component will create a video component using [react-player](https://www.npmjs.com/package/react-player).
-- Any combination of both will display the video above and the image (or images) immediately below.
+- If there is audio in the url field, the Details component will embed the audio using [react-audio-player](https://www.npmjs.com/package/react-audio-player) ``(dependency to be replaced)``.
+- If there is a video in the url field, the Details component will embed the video using [react-player](https://www.npmjs.com/package/react-player).
+- Any combination of both will display the audio or video above and the image (or images) immediately below.
 
 ### Multiple Tour Type Implementation
 
