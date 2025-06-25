@@ -9,7 +9,7 @@
 
 { "type": "Feature", "properties": { "sequence": 4, "name": "Native Plant Species", "imageAlt": "Photo of a flowering plant with green leaves and pink-white flowers", "address": "",  "longitude": -83.054012, "latitude": 42.314553, "extra": false, "id": "20", "image": "/photos/MainTrailNative-Image1.jpg"}, "geometry": { "type": "Point", "coordinates": [ -83.054012, 42.314553 ] } },
 
-{ "type": "Feature", "properties": { "sequence": 5, "name": "Ground, Engage, Express", "imageAlt": "Logo for the GEE project", "address": "256 Cameron Ave", "status": null,"longitude": -83.054740, "latitude": 42.313870, "extra": true, "id": "23", "image": "/photos/GEE-Image1.png" }, "geometry": { "type": "Point", "coordinates": [ -83.054740, 42.313870 ] } },
+{ "type": "Feature", "properties": { "sequence": 5, "name": "Ground, Engage, Express", "imageAlt": "Logo for the GEE project", "address": "284 Cameron Ave", "status": null,"longitude": -83.054740, "latitude": 42.313870, "extra": true, "id": "23", "image": "/photos/GEE-Image1.png" }, "geometry": { "type": "Point", "coordinates": [ -83.054740, 42.313870 ] } },
 
 { "type": "Feature", "properties": { "sequence": 6, "name": "Park History (Mason Entrance)", "imageAlt": "Archival photo of a train going through a tunnel", "address": "222 Cameron Ave (rear, via alley)", "status": null,"longitude": -83.054511, "latitude": 42.314485, "extra": false, "id": "25", "image": "/photos/ParkHistory-Image1.jpg" }, "geometry": { "type": "Point", "coordinates": [ -83.054511, 42.314485 ] } },
 
