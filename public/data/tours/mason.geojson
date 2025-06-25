@@ -13,6 +13,6 @@
 
 { "type": "Feature", "properties": { "sequence": 6, "name": "Invasive Plant Species", "imageAlt": "Photo of a tall shrub with green leaves and small white flowers", "address": "",  "longitude": -83.053560, "latitude": 42.313947, "extra": false, "id": "35", "image": "/photos/MainTrailInvasive-Image6.jpg"}, "geometry": { "type": "Point", "coordinates": [ -83.053560, 42.313947 ] } },
 
-{ "type": "Feature", "properties": { "sequence": 7, "name": "Ground, Engage, Express", "imageAlt": "Logo for the GEE project", "address": "256 Cameron Ave", "status": null,"longitude": -83.054740, "latitude": 42.313870, "extra": true, "id": "23", "image": "/photos/GEE-Image1.png" }, "geometry": { "type": "Point", "coordinates": [ -83.054740, 42.313870 ] } }
+{ "type": "Feature", "properties": { "sequence": 7, "name": "Ground, Engage, Express", "imageAlt": "Logo for the GEE project", "address": "284 Cameron Ave", "status": null,"longitude": -83.054740, "latitude": 42.313870, "extra": true, "id": "23", "image": "/photos/GEE-Image1.png" }, "geometry": { "type": "Point", "coordinates": [ -83.054740, 42.313870 ] } }
 ]
 }
